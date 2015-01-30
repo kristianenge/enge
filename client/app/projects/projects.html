@@ -1,0 +1,23 @@
+<div class="container">
+	<div ng-show="isAdmin()"><a class="btn btn-small btn-primary"  ng-click="addProject()">Add new</a></div>
+</div>
+<div class="container">
+	<flippy ng-repeat="project in projects"
+	class="fancy"
+	ng-click="flip()"
+	flip-duration="800"
+	timing-function="ease-in-out">
+		<flippy-front ng-style="{'background':'url({{project.coverimage}})  no-repeat center'}">
+			<h4 >{{project.name}}</h4>
+		</flippy-front>
+		<flippy-back>
+			<p >{{project.info}}</p>
+			<div id="btnDiv" class="link">
+				<span><a class="btn btn-small btn-primary"  ng-click="viewProject(project)">View more</a></span>
+				<span ng-show="isAdmin()"><a class="btn btn-small btn-primary"  ng-click="editProject(project)">Edit more</a></span>
+				<span ng-show="isAdmin()"><a class="btn btn-small  btn-danger"  ng-click="deleteProject(project)">Delete</a></span>
+			<div>
+		</flippy-back>
+	</flippy>
+	
+</div>

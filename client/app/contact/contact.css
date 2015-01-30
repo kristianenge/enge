@@ -1,0 +1,22 @@
+.circular {
+    width: 300px;
+    height: 300px;
+    border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    background: url(https://lh5.googleusercontent.com/-SbemfIublc0/VJAubNdZE1I/AAAAAAAAFrk/iu5bo-CL68I/w912-h682-no/2010-03-05%2B12.33.44.jpg) no-repeat;
+    background-size: auto 100% ;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+ .container {
+    padding-top: 60px;
+  }
+  @media (max-width: 979px) {
+    .container {
+      padding-top: 0;
+    }
+  }
+div#text { width: 0px; height: 2em; white-space: nowrap; overflow: hidden;  }
