@@ -13,14 +13,14 @@
             </div>
         </div>
         <form novalidate>
-            Pick an cover photo: <input type="file" ng-model="project.coverimage" accept="image/*" multiple app-filereader /><br />
-            <img ng-src="{{project.coverimage}}" width="300" /><br />
-            <button ng-click="project.coverimage = null" ng-show="!!project.coverimage">Remove image</button><br />
+            Pick an cover photo: <input type="file" ng-model="coverimage.rawdata" accept="image/*" multiple app-filereader /><br />
+            <img  ng-src="{{coverimage.rawdata}}" width="300" /><br />
+            <button ng-click="coverimage.rawdata = null" ng-show="!!coverimage.rawdata">Remove image</button><br />
         </form>
         <form novalidate>
-            Pick an image-file: <input type="file" ng-model="project.images" accept="image/*" multiple app-filereader /><br />
-            <img ng-repeat="image in project.images" ng-src="{{image}}" width="300" /><br />
-            <button ng-click="project.images = null" ng-show="!!project.images">Remove {{project.images.length}} images</button><br />
+            Pick an image-file: <input type="file" ng-model="images" accept="image/*" multiple app-filereader /><br />
+            <img ng-repeat="image in images" ng-src="{{image}}" width="300" /><br />
+            <button ng-click="images = null" ng-show="!!images">Remove {{images.length}} images</button><br />
         </form>
         <div class="control-group">
             <div class="controls">

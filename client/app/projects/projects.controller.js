@@ -2,14 +2,12 @@
 
 angular.module('iengeWebApp')
   .controller('ProjectsCtrl', function ($scope, $http, $location, Auth, socket) {
-    
-     
 
-    
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
     $scope.projects = [];
+    
 
     $http.get('/api/projects').success(function(projects) {
       $scope.projects = projects;

@@ -1,5 +1,6 @@
 <div class="container">
 	<h4 >{{project.name}}</h4>
 	<p >{{project.info}}</p>
-	<img ng-src="{{project.coverimage}}" />
+	<img ng-src="{{coverimage.rawdata}}" />
+	<img ng-repeat="image in images" ng-src="{{image}}" width="300" /><br />
 </div>

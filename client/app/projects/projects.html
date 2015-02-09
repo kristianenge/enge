@@ -7,7 +7,7 @@
 	ng-click="flip()"
 	flip-duration="800"
 	timing-function="ease-in-out">
-		<flippy-front ng-style="{'background':'url({{project.coverimage}})  no-repeat center'}">
+		<flippy-front ng-style="{'background':'url(/api/images/{{project.coverimage}})  no-repeat center'}">
 			<h4 >{{project.name}}</h4>
 		</flippy-front>
 		<flippy-back>
