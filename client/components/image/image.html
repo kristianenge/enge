@@ -1,0 +1,55 @@
+
+	<div class='row'>
+		<div class='span12'>
+			<div class='well'>
+				<div class='form-group'>
+					<label>Width</label>
+					<input
+					class='form-control'
+					type='number'
+					placeholder='Width'
+					ng-model='config.width'>
+				</div>
+				<div class='form-group'>
+					<label>Height</label>
+					<input
+					class='form-control'
+					type='number'
+					placeholder='Height'
+					ng-model='config.height'>
+				</div>
+				<div class='form-group'>
+					<label>Quality</label>
+					<input
+					type='range'
+					min='.01'
+					max='1'
+					step='.01'
+					ng-model='config.quality'>
+					<p class='help-block'>
+					1% to 100%
+					</p>
+				</div>
+				<div class='form-group'>
+					<label>Select images</label>
+					<input
+					type="file"
+					accept="image/*"
+					image="images"
+					multiple
+					resize-max-height="{{ config.height }}"
+					resize-max-width="{{ config.width }}"
+					resize-quality="{{ config.quality }}" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+<a
+	ng-repeat='image in images'
+	href='{{ image.resized.dataURL }}'
+	download='{{ config.width }}x{{ config.height }}_{{ image.file.name }}'>
+	<img
+	ng-show="image"
+	ng-src="{{ image.resized.dataURL }}" />
+</a>
