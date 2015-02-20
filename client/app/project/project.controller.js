@@ -101,7 +101,7 @@ app.controller('ProjectCreationCtrl', function ($scope,$location,ProjectsFactory
       height: 600,
       quality: 1
     };
-
+    $scope.images = [];
 
 
     // callback for ng-click 'createNewProject':

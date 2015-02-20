@@ -54,7 +54,7 @@ exports.showEncoded = function(req, res) {
 
 // Creates a new image in the DB.
 exports.create = function(req, res) {
-  
+  console.log('create');
   Image.create(req.body, function(err, image) {
     if(err) { return handleError(res, err); }
     return res.json(201, image);
