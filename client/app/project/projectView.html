@@ -1,6 +1,7 @@
 <div class="container">
-	<h4 >{{project.name}}</h4>
-	<p >{{project.info}}</p>
-	<img ng-src="{{coverimage.rawdata}}" />
-	<img ng-repeat="image in images" ng-src="{{image}}" width="300" /><br />
+	<div class="article col-md-5">
+		<h4 >{{project.name}}</h4>
+		<div btf-markdown="project.info"></div>
+		<img ng-repeat="image in images" ng-src="{{image}}" width="300" /><br />
+	</div>
 </div>

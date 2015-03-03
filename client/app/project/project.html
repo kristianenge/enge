@@ -11,6 +11,7 @@
             <div class="controls">
                 <textarea type="textarea" id="inputProjectInfo" ng-model="project.info"> </textarea>
             </div>
+            <div btf-markdown="project.info"></div>
         </div>
         <form novalidate>
             Pick an cover photo: <input type="file" ng-model="coverimage.rawdata" accept="image/*" multiple app-filereader /><br />
@@ -25,8 +26,8 @@
         <div class="control-group">
             <div class="controls">
                 <!-- user-detail.html: -->
-                <a ng-show="isUpdate()" ng-click="cancel()" class="btn btn-small">cancel</a>
-                <a ng-show="isUpdate()" ng-click="updateProject()" class="btn btn-small btn-primary">update user</a>
+                <a ng-show="isUpdate()" ng-click="cancel()" class="btn btn-small">Cancel</a>
+                <a ng-show="isUpdate()" ng-click="updateProject()" class="btn btn-small btn-primary">Update</a>
                 <a ng-show="isCreate()" ng-click="addProject()" class="btn btn-small btn-primary">Add New</a>
             </div>
         </div>

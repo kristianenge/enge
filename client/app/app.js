@@ -3,10 +3,13 @@
 angular.module('iengeWebApp', [
   'ngCookies',
   'ngResource',
+  'btford.markdown',
   'ngSanitize',
   'ngRoute',
   'btford.socket-io',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'btford.markdown'
+
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider

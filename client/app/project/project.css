@@ -1,0 +1,9 @@
+.container {
+    padding-top: 60px;
+  }
+  @media (max-width: 979px) {
+    .container {
+      padding-top: 0;
+    }
+  }
+div#text { width: 0px; height: 2em; white-space: nowrap; overflow: hidden;  }
